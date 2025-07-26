@@ -286,17 +286,14 @@
             
             const formData = new FormData(event.target);
             const data = Object.fromEntries(formData);
-            
-            // Aqui você integraria com um serviço de email real
-            // Por exemplo: EmailJS, Formspree, ou sua própria API
-            
+                        
             const subject = encodeURIComponent(data.subject);
             const body = encodeURIComponent(
                 `Nome: ${data.name}\nE-mail: ${data.email}\n\nMensagem:\n${data.message}`
             );
             
             // Abre o cliente de email padrão
-            window.location.href = `mailto:vitorpolanski15@email.com?subject=${subject}&body=${body}`;
+            window.location.href = `mailto:vitorpolanski15@gmail.com?subject=${subject}&body=${body}`;
             
             // Feedback visual
             const btn = event.target.querySelector('.submit-btn');
